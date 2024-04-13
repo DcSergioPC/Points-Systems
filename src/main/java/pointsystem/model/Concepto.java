@@ -8,6 +8,11 @@ import jakarta.persistence.Id;
 import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Table;
 
+// 2) Administracióndeconceptosdeusodepuntos
+//  Este módulo contempla la administración de los diferentes conceptos que especifican a qué
+//  fueron destinados los puntos utilizados, con su respectiva cantidad de puntos requerida. Por
+//  ejemplo: vale de premio, vale de descuento, vale de consumición, etc.
+//  Estructura: id autogenerado, descripción de concepto, puntos requeridos.
 @Entity
 @Table(name = "concepto")
 public class Concepto {

@@ -18,8 +18,6 @@ public class PersonaRest {
     @Inject
     PersonaDAO personaDAO;
 
-
-
     @POST
     @Path("/")
     public Response agregar(Cliente p) {
