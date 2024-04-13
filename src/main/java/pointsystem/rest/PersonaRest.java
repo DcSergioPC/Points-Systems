@@ -2,7 +2,7 @@ package pointsystem.rest;
 
 // import org.hibernate.Session;
 import pointsystem.ejb.PersonaDAO;
-import pointsystem.model.Persona;
+import pointsystem.model.Cliente;
 
 import jakarta.enterprise.context.RequestScoped;
 import jakarta.inject.Inject;
@@ -22,7 +22,7 @@ public class PersonaRest {
 
     @POST
     @Path("/")
-    public Response agregar(Persona p) {
+    public Response agregar(Cliente p) {
         personaDAO.agregar(p);
         return Response.ok(p).build();
     }
@@ -42,8 +42,8 @@ public class PersonaRest {
 
     @PUT
     @Path("/")
-    public Response modificar (Persona p) {
-        Persona p2=personaDAO.modificar(p);
+    public Response modificar (Cliente p) {
+        Cliente p2=personaDAO.modificar(p);
         return Response.ok(p2).build();
     }
 }

@@ -5,7 +5,7 @@ import org.hibernate.Session;
 // import org.hibernate.criterion.MatchMode;
 // import org.hibernate.criterion.Restrictions;
 import org.hibernate.internal.SessionImpl;
-import pointsystem.model.Persona;
+import pointsystem.model.Cliente;
 
 import jakarta.ejb.Stateless;
 import jakarta.persistence.EntityManager;
@@ -27,28 +27,28 @@ public class PersonaDAO {
         return (SessionImpl)entityManager.getDelegate();
     }
 
-    public void agregar(Persona p) {
+    public void agregar(Cliente p) {
         this.entityManager.persist(p);
     }
 
-    public List<Persona> obtenerPersonas() {
-        return this.entityManager.createQuery("select p from Persona p",Persona.class).getResultList();
+    public List<Cliente> obtenerPersonas() {
+        return this.entityManager.createQuery("select p from Persona p",Cliente.class).getResultList();
     }
 
     public void eliminar (Integer idPersona) {
-        Persona p=this.entityManager.find(Persona.class,idPersona);
+        Cliente p=this.entityManager.find(Cliente.class,idPersona);
         this.entityManager.remove(p);
     }
 
-    public Persona modificar (Persona p) {
+    public Cliente modificar (Cliente p) {
         return this.entityManager.merge(p);
     }
 
 
-    public List<Persona> obtenerPersonas(String nombre, String apellido) {
+    public List<Cliente> obtenerPersonas(String nombre, String apellido) {
         CriteriaBuilder criteriaBuilder = entityManager.getCriteriaBuilder();
-        CriteriaQuery<Persona> criteriaQuery = criteriaBuilder.createQuery(Persona.class);
-        Root<Persona> root = criteriaQuery.from(Persona.class);
+        CriteriaQuery<Cliente> criteriaQuery = criteriaBuilder.createQuery(Cliente.class);
+        Root<Cliente> root = criteriaQuery.from(Cliente.class);
 
         List<Predicate> predicates = new ArrayList<>();
         if (nombre != null) {

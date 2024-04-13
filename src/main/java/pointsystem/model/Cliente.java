@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 
 @Entity
 @Table(name = "cliente")
-public class Persona {
+public class Cliente {
     @Id
     @Basic(optional = false)
     @Column(name = "id_persona")
@@ -36,7 +36,7 @@ public class Persona {
     @Column(name = "fecha_nacimiento")
     private java.sql.Date fechaNacimiento;
 
-    public Persona() {
+    public Cliente() {
     }
 
     public Integer getIdPersona() {
