@@ -22,9 +22,11 @@ public class Concepto {
     @GeneratedValue(generator = "conceptoSec")
     @SequenceGenerator(name = "conceptoSec",sequenceName = "concepto_sec",allocationSize = 0)
     private Integer idConcepto;
+
     @Basic(optional = false)
     @Column(name = "descripcion", length = 250)
     private String descripcion;
+    
     @Basic(optional = false)
     @Column(name = "puntos")
     private java.math.BigInteger puntos;
