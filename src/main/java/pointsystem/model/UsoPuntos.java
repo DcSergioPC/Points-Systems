@@ -37,7 +37,7 @@ public class UsoPuntos {
     
     @Basic(optional = false)
     @Column(name = "fecha")
-    private java.sql.Date fecha;
+    private java.time.LocalDate fecha;
 
     @Basic(optional = false)
     @Column(name = "conceptoUso", length = 250)
@@ -67,11 +67,11 @@ public class UsoPuntos {
         this.puntosUtilizados = puntosUtilizados;
     }
 
-    public java.sql.Date getFecha() {
+    public java.time.LocalDate getFecha() {
         return fecha;
     }
 
-    public void setFecha(java.sql.Date fecha) {
+    public void setFecha(java.time.LocalDate fecha) {
         this.fecha = fecha;
     }
 

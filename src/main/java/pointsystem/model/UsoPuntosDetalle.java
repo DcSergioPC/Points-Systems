@@ -11,7 +11,7 @@ import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Table;
 
 // Detalle: id autogenerado, identificador de la cabecera, puntaje utilizado, identificador
-//  de la bolsa de puntos utilizada
+// de la bolsa de puntos utilizada
 
 @Entity
 @Table(name = "usoPuntosDetalle")
@@ -33,7 +33,7 @@ public class UsoPuntosDetalle {
     
     @Basic(optional = false)
     @Column(name = "fecha")
-    private java.sql.Date fecha;
+    private java.time.LocalDate fecha;
 
     @Basic(optional = false)
     @Column(name = "conceptoUso", length = 250)
@@ -63,11 +63,11 @@ public class UsoPuntosDetalle {
         this.puntosUtilizados = puntosUtilizados;
     }
 
-    public java.sql.Date getFecha() {
+    public java.time.LocalDate getFecha() {
         return fecha;
     }
 
-    public void setFecha(java.sql.Date fecha) {
+    public void setFecha(java.time.LocalDate fecha) {
         this.fecha = fecha;
     }
 
