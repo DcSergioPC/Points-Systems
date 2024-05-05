@@ -1,5 +1,7 @@
 package pointsystem.model;
 
+import java.time.LocalDate;
+
 import jakarta.persistence.*;
 
 // 1) Administración de datos del cliente
@@ -49,7 +51,7 @@ public class Cliente {
 
     @Basic(optional = false)
     @Column(name = "fecha_nacimiento")
-    private java.sql.Date fechaNacimiento;
+    private LocalDate fechaNacimiento;
 
     public Cliente() {
     }
@@ -118,11 +120,11 @@ public class Cliente {
         this.telefono = telefono;
     }
 
-    public java.util.Date getFechaNacimiento() {
+    public LocalDate getFechaNacimiento() {
         return fechaNacimiento;
     }
 
-    public void setFechaNacimiento(java.sql.Date fechaNacimiento) {
+    public void setFechaNacimiento(LocalDate fechaNacimiento) {
         this.fechaNacimiento = fechaNacimiento;
     }
 }
