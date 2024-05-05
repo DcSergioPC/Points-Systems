@@ -50,4 +50,59 @@ public class Bolsa {
     @Column(name = "monto")
     private java.math.BigInteger monto;
 
+    public Integer getIdConcepto() {
+        return idConcepto;
+    }
+
+    public void setIdConcepto(Integer idConcepto) {
+        this.idConcepto = idConcepto;
+    }
+
+    public Cliente getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
+    }
+
+    public java.sql.Date getFechaAsignacion() { 
+        return fechaAsignacion;
+    }
+
+    public void setFechaAsignacion(java.sql.Date fechaAsignacion) { 
+        this.fechaAsignacion = fechaAsignacion;
+    }
+
+    public java.sql.Date getFechaCaducidad() {  
+        return fechaCaducidad;
+    }
+
+    public void setFechaCaducidad(java.sql.Date fechaCaducidad) {
+        this.fechaCaducidad = fechaCaducidad;
+    }
+
+    public java.math.BigInteger getPuntaje() {
+        return puntaje;
+    }
+
+    public void setPuntaje(java.math.BigInteger puntaje) {
+        this.puntaje = puntaje;
+    }
+
+    public java.math.BigInteger getSaldo() {
+        return saldo;
+    }
+
+    public void setSaldo(java.math.BigInteger saldo) {
+        this.saldo = saldo;
+    }
+
+    public java.math.BigInteger getMonto() {
+        return monto;
+    }
+
+    public void setMonto(java.math.BigInteger monto) {
+        this.monto = monto;
+    }
 }

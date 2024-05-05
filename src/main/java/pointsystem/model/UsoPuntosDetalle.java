@@ -38,4 +38,44 @@ public class UsoPuntosDetalle {
     @Basic(optional = false)
     @Column(name = "conceptoUso", length = 250)
     private String conceptoUso;
+
+    public Integer getIdUsoPuntosDetalle() {
+        return idUsoPuntosDetalle;
+    }
+
+    public void setIdUsoPuntosDetalle(Integer idUsoPuntosDetalle) {
+        this.idUsoPuntosDetalle = idUsoPuntosDetalle;
+    }
+
+    public Cliente getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
+    }
+
+    public java.math.BigInteger getPuntosUtilizados() {
+        return puntosUtilizados;
+    }
+
+    public void setPuntosUtilizados(java.math.BigInteger puntosUtilizados) {
+        this.puntosUtilizados = puntosUtilizados;
+    }
+
+    public java.sql.Date getFecha() {
+        return fecha;
+    }
+
+    public void setFecha(java.sql.Date fecha) {
+        this.fecha = fecha;
+    }
+
+    public String getConceptoUso() {
+        return conceptoUso;
+    }
+
+    public void setConceptoUso(String conceptoUso) {
+        this.conceptoUso = conceptoUso;
+    }
 }

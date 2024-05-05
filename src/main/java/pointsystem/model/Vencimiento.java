@@ -36,4 +36,36 @@ public class Vencimiento {
     @Basic(optional = false)
     @Column(name = "duracion")
     private java.math.BigInteger duracion;
+
+    public Integer getIdConcepto() {
+        return idConcepto;
+    }
+
+    public void setIdConcepto(Integer idConcepto) {
+        this.idConcepto = idConcepto;
+    }
+
+    public java.sql.Date getFechaInicio() {
+        return fechaInicio;
+    }
+
+    public void setFechaInicio(java.sql.Date fechaInicio) {
+        this.fechaInicio = fechaInicio;
+    }
+
+    public java.sql.Date getFechaFin() {
+        return fechaFin;
+    }
+
+    public void setFechaFin(java.sql.Date fechaFin) {
+        this.fechaFin = fechaFin;
+    }
+
+    public java.math.BigInteger getDuracion() {
+        return duracion;
+    }
+
+    public void setDuracion(java.math.BigInteger duracion) {
+        this.duracion = duracion;
+    }
 }
