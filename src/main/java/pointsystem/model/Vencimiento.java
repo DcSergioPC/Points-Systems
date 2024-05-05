@@ -27,11 +27,11 @@ public class Vencimiento {
 
     @Basic(optional = false)
     @Column(name = "fecha_inicio")
-    private java.sql.Date fechaInicio;
+    private java.time.LocalDate fechaInicio;
 
     @Basic(optional = false)
     @Column(name = "fecha_fin")
-    private java.sql.Date fechaFin;
+    private java.time.LocalDate fechaFin;
     
     @Basic(optional = false)
     @Column(name = "duracion")
@@ -45,19 +45,19 @@ public class Vencimiento {
         this.idConcepto = idConcepto;
     }
 
-    public java.sql.Date getFechaInicio() {
+    public java.time.LocalDate getFechaInicio() {
         return fechaInicio;
     }
 
-    public void setFechaInicio(java.sql.Date fechaInicio) {
+    public void setFechaInicio(java.time.LocalDate fechaInicio) {
         this.fechaInicio = fechaInicio;
     }
 
-    public java.sql.Date getFechaFin() {
+    public java.time.LocalDate getFechaFin() {
         return fechaFin;
     }
 
-    public void setFechaFin(java.sql.Date fechaFin) {
+    public void setFechaFin(java.time.LocalDate fechaFin) {
         this.fechaFin = fechaFin;
     }
 

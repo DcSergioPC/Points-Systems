@@ -1,5 +1,7 @@
 package pointsystem.model;
 
+import java.time.LocalDate;
+
 import jakarta.persistence.Basic;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -32,11 +34,11 @@ public class Bolsa {
 
     @Basic(optional = false)
     @Column(name = "fecha_asignacion")
-    private java.sql.Date fechaAsignacion;
+    private LocalDate fechaAsignacion;
     
     @Basic(optional = false)
     @Column(name = "fecha_caducidad")
-    private java.sql.Date fechaCaducidad;
+    private LocalDate fechaCaducidad;
 
     @Basic(optional = false)
     @Column(name = "puntaje")
@@ -66,19 +68,19 @@ public class Bolsa {
         this.cliente = cliente;
     }
 
-    public java.sql.Date getFechaAsignacion() { 
+    public LocalDate getFechaAsignacion() { 
         return fechaAsignacion;
     }
 
-    public void setFechaAsignacion(java.sql.Date fechaAsignacion) { 
+    public void setFechaAsignacion(LocalDate fechaAsignacion) { 
         this.fechaAsignacion = fechaAsignacion;
     }
 
-    public java.sql.Date getFechaCaducidad() {  
+    public LocalDate getFechaCaducidad() {  
         return fechaCaducidad;
     }
 
-    public void setFechaCaducidad(java.sql.Date fechaCaducidad) {
+    public void setFechaCaducidad(LocalDate fechaCaducidad) {
         this.fechaCaducidad = fechaCaducidad;
     }
 
