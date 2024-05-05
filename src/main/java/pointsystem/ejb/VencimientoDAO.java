@@ -32,7 +32,7 @@ public class VencimientoDAO {
     }
 
     public List<Vencimiento> obtenerVencimientos() {
-        return this.entityManager.createQuery("select p from vencimiento p",Vencimiento.class).getResultList();
+        return this.entityManager.createQuery("select v from Vencimiento v",Vencimiento.class).getResultList();
     }
 
     public void eliminar (Integer idVencimiento) {

@@ -32,7 +32,7 @@ public class ConceptoDAO {
     }
 
     public List<Concepto> obtenerConceptos() {
-        return this.entityManager.createQuery("select p from concepto p",Concepto.class).getResultList();
+        return this.entityManager.createQuery("select c from Concepto c",Concepto.class).getResultList();
     }
 
     public void eliminar (Integer idConcepto) {

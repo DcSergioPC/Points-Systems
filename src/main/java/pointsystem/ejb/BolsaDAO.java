@@ -32,7 +32,7 @@ public class BolsaDAO {
     }
 
     public List<Bolsa> obtenerBolsas() {
-        return this.entityManager.createQuery("select p from bolsa p",Bolsa.class).getResultList();
+        return this.entityManager.createQuery("select b from Bolsa b",Bolsa.class).getResultList();
     }
 
     public void eliminar (Integer idBolsa) {

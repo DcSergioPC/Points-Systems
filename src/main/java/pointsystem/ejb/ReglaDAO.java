@@ -32,7 +32,7 @@ public class ReglaDAO {
     }
 
     public List<Regla> obtenerReglas() {
-        return this.entityManager.createQuery("select p from regla p",Regla.class).getResultList();
+        return this.entityManager.createQuery("select r from Regla r",Regla.class).getResultList();
     }
 
     public void eliminar (Integer idRegla) {
