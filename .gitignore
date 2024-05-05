@@ -1,0 +1,9 @@
+*
+!pom.xml
+!src/
+!src/**
+src/test/
+!README.md
+!.vscode/
+!.vscode/*
+!.gitignore
