@@ -28,7 +28,7 @@ public class ClienteRest {
     @GET
     @Path("/")
     public Response lista(@QueryParam("nombre") String nombre,@QueryParam("apellido") String apellido) {
-        return Response.ok(clienteDAO.obtenerClientes(nombre, apellido)).build();
+        return Response.ok(clienteDAO.obtenerClientes()).build();
     }
 
     @DELETE
