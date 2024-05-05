@@ -16,7 +16,7 @@ import jakarta.persistence.Table;
 //  duración del puntaje.
 
 @Entity
-@Table(name = "regla")
+@Table(name = "vencimiento")
 public class Vencimiento {
     @Id
     @Basic(optional = false)
