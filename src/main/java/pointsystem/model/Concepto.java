@@ -30,4 +30,28 @@ public class Concepto {
     @Basic(optional = false)
     @Column(name = "puntos")
     private java.math.BigInteger puntos;
+
+    public Integer getIdConcepto() {
+        return idConcepto;
+    }
+
+    public void setIdConcepto(Integer idConcepto) {
+        this.idConcepto = idConcepto;
+    }
+
+    public String getDescripcion() {    
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+
+    public java.math.BigInteger getPuntos() {
+        return puntos;
+    }
+
+    public void setPuntos(java.math.BigInteger puntos) {
+        this.puntos = puntos;
+    }
 }
