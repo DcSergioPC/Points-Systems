@@ -8,7 +8,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Table;
 
-// 3) Administracióndereglasdeasignación depuntos
+// 3) Administración de reglas de asignación de puntos
 //  Este módulo permite definir las reglas que rigen la cantidad de puntos a asignar a un cliente
 //  en base al rango de valor de consumo:
 // Ejemplo:
@@ -24,10 +24,10 @@ import jakarta.persistence.Table;
 public class Regla {
     @Id
     @Basic(optional = false)
-    @Column(name = "id_concepto")
-    @GeneratedValue(generator = "conceptoSec")
-    @SequenceGenerator(name = "conceptoSec",sequenceName = "concepto_sec",allocationSize = 0)
-    private Integer idConcepto;
+    @Column(name = "id_regla")
+    @GeneratedValue(generator = "reglaSec")
+    @SequenceGenerator(name = "reglaSec",sequenceName = "regla_sec",allocationSize = 0)
+    private Integer idRegla;
 
     @Basic(optional = false)
     @Column(name = "descripcion", length = 250)
@@ -44,4 +44,47 @@ public class Regla {
     @Basic(optional = false)
     @Column(name = "monto")
     private java.math.BigInteger monto;
+
+    public Regla() {
+    }
+
+    public Integer getIdRegla() {
+        return idRegla;
+    }
+
+    public void setIdRegla(Integer idRegla) {
+        this.idRegla = idRegla;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+
+    public java.math.BigInteger getLimiteInf() {    
+        return limiteInf;
+    }
+
+    public void setLimiteInf(java.math.BigInteger limiteInf) {
+        this.limiteInf = limiteInf;
+    }
+
+    public java.math.BigInteger getLimiteSup() {
+        return limiteSup;
+    }
+
+    public void setLimiteSup(java.math.BigInteger limiteSup) {
+        this.limiteSup = limiteSup;
+    }
+
+    public java.math.BigInteger getMonto() {    
+        return monto;
+    }
+
+    public void setMonto(java.math.BigInteger monto) {
+        this.monto = monto;
+    }
 }

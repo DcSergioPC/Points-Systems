@@ -32,7 +32,7 @@ public class ClienteDAO {
     }
 
     public List<Cliente> obtenerClientes() {
-        return this.entityManager.createQuery("select p from Cliente p",Cliente.class).getResultList();
+        return this.entityManager.createQuery("select c from cliente c",Cliente.class).getResultList();
     }
 
     public void eliminar (Integer idCliente) {
