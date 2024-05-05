@@ -36,6 +36,13 @@
 
          <!-- Properties for Hibernate -->
          <property name="hibernate.show_sql" value="false" />
+
+         <!-- Configuración de conexión a PostgreSQL -->
+         <!-- <property name="jakarta.persistence.jdbc.driver" value="${jdbc.driver}"/>
+         <property name="jakarta.persistence.jdbc.url" value="${jdbc.url}"/>
+         <property name="jakarta.persistence.jdbc.user" value="${jdbc.username}"/>
+         <property name="jakarta.persistence.jdbc.password" value="${jdbc.password}"/> -->
+
       </properties>
    </persistence-unit>
 </persistence>

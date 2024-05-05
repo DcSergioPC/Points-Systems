@@ -50,6 +50,16 @@
 
         <!-- maven-compiler-plugin -->
         <maven.compiler.release>11</maven.compiler.release>
+        
+        <wildfly.hostname>${env.WILDFLY_HOSTNAME}</wildfly.hostname>
+        <wildfly.port>${env.WILDFLY_PORT}</wildfly.port>
+        <wildfly.username>${env.WILDFLY_USERNAME}</wildfly.username>
+        <wildfly.password>${env.WILDFLY_PASSWORD}</wildfly.password>
+
+        <jdbc.driver>${env.JDBC_DRIVER}</jdbc.driver>
+        <jdbc.url>${env.JDBC_URL}</jdbc.url>
+        <jdbc.username>${env.JDBC_USER}</jdbc.username>
+        <jdbc.password>${env.JDBC_PASSWORD}</jdbc.password>
     </properties>
 
     <!-- the JBoss community and Red Hat GA Maven repositories -->
@@ -112,7 +122,7 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.hibernate</groupId>
+            <groupId>org.hibernate.orm</groupId>
             <artifactId>hibernate-entitymanager</artifactId>
             <version>6.0.0.Alpha7</version>
             <type>pom</type>
@@ -230,6 +240,13 @@
                 <groupId>org.wildfly.plugins</groupId>
                 <artifactId>wildfly-maven-plugin</artifactId>
                 <version>${version.wildfly.maven.plugin}</version>
+                <configuration>
+                    <!-- Configura el servidor WildFly -->
+                    <hostname>${wildfly.hostname}</hostname>
+                    <port>${wildfly.port}</port>
+                    <username>${wildfly.username}</username>
+                    <password>${wildfly.password}</password>
+                </configuration>
             </plugin>
         </plugins>
     </build>
